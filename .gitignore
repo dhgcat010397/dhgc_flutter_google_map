@@ -66,4 +66,4 @@ app.*.map.json
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 
-/android/local.properties
+android/local.properties
