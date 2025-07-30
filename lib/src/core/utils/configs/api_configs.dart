@@ -7,6 +7,8 @@ class ApiConfigs {
   static late final String imageBaseUrl;
   static late final String apiVersion;
 
+  static late final String apiKeyGoogleMaps;
+
   /// Google API Keys
   static late final String fcmServerKey;
   static final String fcm = 'https://fcm.googleapis.com/fcm/send';
