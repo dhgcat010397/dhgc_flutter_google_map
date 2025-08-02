@@ -60,7 +60,9 @@ dependencies:
   # dio: 5.8.0+1
 
   # Google Maps
-  google_maps_flutter: 2.12.2
+  google_maps_flutter: 2.12.3
+  location: 8.0.1
+  flutter_polyline_points: 3.0.1
 
 
 dev_dependencies:

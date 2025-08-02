@@ -5,7 +5,7 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-def googleMapsApiKey = project.hasProperty('GOOGLE_MAPS_API_KEY') ? project.GOOGLE_MAPS_API_KEY : ""
+val googleMapsApiKey: String? = project.findProperty("GOOGLE_MAPS_API_KEY") as String?
 
 android {
     namespace = "com.example.dhgc_flutter_google_map"
@@ -34,7 +34,7 @@ android {
         versionName = flutter.versionName
         multiDexEnabled = true
 
-        manifestPlaceholders = [googleMapsApiKey: googleMapsApiKey]
+        manifestPlaceholders["googleMapsApiKey"] = googleMapsApiKey ?: ""
     }
 
     buildTypes {
@@ -67,7 +67,7 @@ dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
 
     // Firebase Push Notification
-    // coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
 
 flutter {
